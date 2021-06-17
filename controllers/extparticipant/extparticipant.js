@@ -406,7 +406,7 @@ async function _token(req, res) {
       oauth_client_id: client.id,
       user_id: user.id,
       authorization_code: req.body.code,
-      scope: scopes
+      scope: Array.from(scopes)
   });
 
   // Return id and access tokens
